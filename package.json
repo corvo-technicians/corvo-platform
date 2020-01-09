@@ -1,0 +1,27 @@
+{
+  "name": "corvo-platform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corvo-technicians/corvo-platform.git"
+  },
+  "author": "corvo-technicians",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/corvo-technicians/corvo-platform/issues"
+  },
+  "homepage": "https://github.com/corvo-technicians/corvo-platform#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}
