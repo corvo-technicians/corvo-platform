@@ -2,9 +2,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
 
 // Importazione Routers
 const basicRouter = require('./routes/basicRoutes');
+
 
 // Inizializzazione App
 const app = express();
@@ -24,6 +26,7 @@ app.set('view engine', 'ejs');
 // Settaggio BodyParser
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+
 
 app.use('/', basicRouter);
 

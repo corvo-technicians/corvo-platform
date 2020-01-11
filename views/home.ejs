@@ -1,2 +1,139 @@
-<%- require('./partials/header') %>
-<%- require('./partials/footer') %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Title -->
+    <title>Codice Corvo - Primo volume</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="../../assets/vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/hs-megamenu/src/hs.megamenu.css">
+    <link rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../../documentation/assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../documentation/assets/vendor/prism/prism.css">
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="../../assets/css/theme.css">
+
+    <!-- CSS Front Doc -->
+    <link rel="stylesheet" href="../../documentation/assets/css/starter.css">
+</head>
+
+<body>
+
+
+    <!-- PORCODIO IL COLLEGAMENTO ALL'HEADER
+ -->
+    <!-- ========== MAIN ========== -->
+    <main id="content" role="main">
+        <!-- Content Section -->
+        <div class="bg-white">
+            <div class="container space-2">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 mb-7">
+                        <!-- Copertina libro -->
+                        <div class="card p-1 mb-4  grandezzaCardCopertina">
+                            <div class="card-body text-center">
+                                <div class="mb-1">
+                                    <img src="codiceCorvo.jpg" alt="Copertina libro" class="grandezzaLibro">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Copertina libro -->
+                    </div>
+                    <div class="col-lg-6 ml-5">
+                        <!-- User Details -->
+                        <div class="mb-4">
+                            <h2 class="h4">Codice Corvo - Primo volume <br>
+                                <font size="4">"Breve sommario delle cronache della città di Cuneo"</font>
+                            </h2>
+                        </div>
+                        <!-- End User Details -->
+
+                        <!-- Info -->
+                        <div class="mb-4">
+                            <p>
+                                <span class="h6 text-secondary mb-0"> A cura di </span>Elena Giuliano e Stefano Robaldo
+                                <br>
+                                <span class="h6 text-secondary mb-0"> Pagine:</span> 639 <br>
+                                <span class="h6 text-secondary mb-0"> Editore: </span>PRIMALPE <br>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Info -->
+                    <div class="col-lg-9 ">
+                        <%- data.contenuto %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- End Content Section -->
+        <!-- ========== END MAIN ========== -->
+    </main>
+
+
+
+
+
+    <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+    <!-- JS Global Compulsory -->
+    <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="../../assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+    <script src="../../assets/vendor/svg-injector/dist/svg-injector.min.js"></script>
+    <script src="../../documentation/assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+    <script src="../../documentation/assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+    <script src="../../documentation/assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+    <script src="../../documentation/assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+    <script src="../../documentation/assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Front -->
+    <script src="../../assets/js/hs.core.js"></script>
+    <script src="../../assets/js/components/hs.header.js"></script>
+    <script src="../../assets/js/components/hs.unfold.js"></script>
+    <script src="../../assets/js/components/hs.svg-injector.js"></script>
+    <script src="../../assets/js/components/hs.go-to.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+        $(window).on('load', function () {
+            // initialization of HSMegaMenu component
+            $('.js-mega-menu').HSMegaMenu({
+                event: 'hover',
+                pageContainer: $('.container'),
+                breakpoint: 767.98,
+                hideTimeOut: 0
+            });
+
+            // initialization of svg injector module
+            $.HSCore.components.HSSVGIngector.init('.js-svg-injector');
+        });
+
+        $(document).on('ready', function () {
+            // initialization of header
+            $.HSCore.components.HSHeader.init($('#header'));
+
+            // initialization of go to
+            $.HSCore.components.HSGoTo.init('.js-go-to');
+        });
+    </script>
+</body>
+
+</html>

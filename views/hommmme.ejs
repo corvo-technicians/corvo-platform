@@ -1,0 +1,9 @@
+<%- include('./partials/header') %>
+<p>BLOCCHI</p>
+<ul>
+    <% data.forEach((dato) => { %>
+    <li><%= dato.titolo %> <%= dato.contenuto %> <%= dato.contenutoTradotto %> <%= dato.temi %> <%= dato.personaggi %>
+        <%= dato.note %></li>
+    <% }) %>
+</ul>
+<%- include('./partials/footer') %>
